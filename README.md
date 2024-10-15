@@ -1,53 +1,52 @@
-# React + TypeScript + Vite
-
 
 ## Demo
 https://blogging-platform-silk-five.vercel.app
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Full-Stack Blog Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+This is a full-stack blog application built using React for the frontend and Node.js with Express for the backend. The application allows users to view and create blog posts. It utilizes a RESTful API to manage blog data and includes features such as user authentication, loading states, and skeleton screens for better user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**: 
+  - React
+  - TypeScript
+  - Tailwind CSS
+  - React Router
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Backend**: 
+  - Node.js
+  - Express
+  - Aiven PostgreSQL
+  - Prisma ORM
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Tools**: 
+  - Axios (for API calls)
+  - Postman (for testing API endpoints)
+  - Cloudflare (for managing DNS and SSL)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Features
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- View a list of blog posts
+- Blog post details with author information
+- Loading skeletons while fetching data
+- Responsive design with Tailwind CSS
+- Simple user authentication using token-based access
+- Database management with Prisma ORM
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- Node.js (v14 or later)
+- PostgreSQL (for local development, if applicable)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vivektrip18/Blogging-Platform.git

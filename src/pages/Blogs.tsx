@@ -5,18 +5,11 @@ import { useBlogs } from "../hooks";
 
 export const Blogs = () => {
     const { loading, blogs } = useBlogs();
-    
-    // Get the current date formatted as "2nd Feb 2024"
-    const currentDate = new Date().toLocaleDateString('en-US', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-    });
 
     if (loading || !blogs) {
         return (
             <div>
-                <Appbar /> 
+                <Appbar />
                 <div className="flex justify-center">
                     <div>
                         <BlogSkeleton />
@@ -42,7 +35,7 @@ export const Blogs = () => {
                             authorName={blog.author.name || "Anonymous"}
                             title={blog.title}
                             content={blog.content}
-                            publishedDate={currentDate} // Use current date here
+                            publishedDate={blog.publishedDate} // Pass the date directly
                         />
                     ))}
                 </div>

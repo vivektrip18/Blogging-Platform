@@ -1,6 +1,6 @@
 
 ## Demo
-https://blogging-platform-silk-five.vercel.app
+https://blogging-platform.vivektripathi.in/
 
 # Full-Stack Blog Application
 
